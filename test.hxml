@@ -1,0 +1,13 @@
+-cp src
+
+-L fount
+-L utest
+
+-main tests.RunTests
+--interp
+
+--dce full
+-D analyzer-optimize
+# -D no-inline # leaving this for easier debugging
+
+--macro nullSafety("datum", Strict)

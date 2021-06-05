@@ -1,0 +1,30 @@
+{
+    "name": "datum",
+    "url": "https://github.com/BJogart/datum",
+    "license": "MIT",
+    "tags": [
+        "map",
+        "dictionary",
+        "set",
+        "unique",
+        "key",
+        "value",
+        "null-safe",
+        "Option",
+        "stack",
+        "queue",
+        "buffer"
+    ],
+    "description": "Customizable dictionaries, sets, and other collections.",
+    "version": "0.0.0",
+    "releasenote": "Initial release",
+    "classPath": "src/",
+    "contributors": [
+        "BJogart"
+    ],
+    "dependencies": {
+        "utest": "1.13.2",
+        "fount": ""
+    },
+    "main": "tests.RunTests"
+}

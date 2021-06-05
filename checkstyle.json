@@ -1,0 +1,320 @@
+{
+    "defaultSeverity": "INFO",
+    "extendsConfigPath": "",
+    "numberOfCheckerThreads": 5,
+    "baseDefines": [],
+    "defineCombinations": [],
+    "checks": [
+        {
+            "type": "Anonymous"
+        },
+        {
+            "type": "ArrayLiteral"
+        },
+        {
+            "type": "ArrowFunction",
+            "props": {
+                "allowCurlyBody": true,
+                "allowFunction": false,
+                "allowReturn": false,
+                "allowSingleArgParens": false
+            }
+        },
+        {
+            "type": "AvoidStarImport"
+        },
+        {
+            "type": "CatchParameterName",
+            "props": {
+                "format": "^(ex?)$",
+                "severity": "ERROR"
+            }
+        },
+        {
+            "type": "ConstantName",
+            "props": {
+                "format": "^[A-Z][A-Z0-9_]*$",
+                "ignoreExtern": true,
+                "tokens": [
+                    "INLINE",
+                    "NOTINLINE"
+                ]
+            }
+        },
+        {
+            "type": "CyclomaticComplexity",
+            "props": {
+                "severity": "IGNORE"
+            }
+        },
+        {
+            "type": "DefaultComesLast"
+        },
+        {
+            "type": "DocCommentStyle",
+            "props": {
+                "lineStyle": "none",
+                "startStyle": "twostars"
+            }
+        },
+        {
+            "type": "Dynamic",
+            "props": {
+                "severity": "ERROR"
+            }
+        },
+        {
+            "type": "FieldDocComment",
+            "props": {
+                "excludeNames": [],
+                "fieldType": "BOTH",
+                "ignoreOverride": true,
+                "modifier": "PUBLIC",
+                "requireParams": false,
+                "requireReturn": false,
+                "tokens": [
+                    "ABSTRACT_DEF",
+                    "CLASS_DEF",
+                    "ENUM_DEF",
+                    "INTERFACE_DEF",
+                    "TYPEDEF_DEF"
+                ]
+            }
+        },
+        {
+            "type": "FileLength",
+            "props": {
+                "ignoreEmptyLines": true,
+                "max": 2000
+            }
+        },
+        {
+            "type": "Final",
+            "props": {}
+        },
+        {
+            "type": "HexadecimalLiteral",
+            "props": {
+                "option": "lowerCase"
+            }
+        },
+        {
+            "type": "LineLength",
+            "props": {
+                "max": 160
+            }
+        },
+        {
+            "type": "LocalVariableName",
+            "props": {
+                "ignoreExtern": true,
+                "format": "^[a-z][a-zA-Z0-9]*$"
+            }
+        },
+        {
+            "type": "MagicNumber",
+            "props": {
+                "ignoreNumbers": [
+                    -1,
+                    0,
+                    1,
+                    2,
+                    10
+                ]
+            }
+        },
+        {
+            "type": "MemberName",
+            "props": {
+                "format": "^_?[a-z][a-zA-Z0-9]*$",
+                "ignoreExtern": true,
+                "tokens": [
+                    "CLASS",
+                    "PRIVATE",
+                    "PUBLIC",
+                    "TYPEDEF"
+                ]
+            }
+        },
+        {
+            "type": "MemberName",
+            "props": {
+                "format": "^_?[a-zA-Z][a-zA-Z0-9]*$",
+                "ignoreExtern": true,
+                "tokens": [
+                    "ABSTRACT"
+                ]
+            }
+        },
+        {
+            "type": "MemberName",
+            "props": {
+                "format": "^[A-Z][a-zA-Z0-9]*$",
+                "ignoreExtern": true,
+                "tokens": [
+                    "ENUM"
+                ]
+            }
+        },
+        {
+            "type": "MethodLength",
+            "props": {
+                "ignoreEmptyLines": true,
+                "max": 50
+            }
+        },
+        {
+            "type": "MethodName",
+            "props": {
+                "format": "^_?[a-z][a-zA-Z0-9]*$",
+                "tokens": [
+                    "INLINE",
+                    "NOTINLINE",
+                    "STATIC",
+                    "NOTSTATIC",
+                    "PRIVATE",
+                    "PUBLIC"
+                ]
+            }
+        },
+        {
+            "type": "ModifierOrder",
+            "props": {
+                "modifiers": [
+                    "MACRO",
+                    "OVERRIDE",
+                    "PUBLIC_PRIVATE",
+                    "STATIC",
+                    "INLINE",
+                    "DYNAMIC"
+                ]
+            }
+        },
+        {
+            "type": "MultipleStringLiterals",
+            "props": {
+                "allowDuplicates": 2,
+                "minLength": 3
+            }
+        },
+        {
+            "type": "MultipleVariableDeclarations",
+            "props": {
+                "severity": "IGNORE"
+            }
+        },
+        {
+            "type": "NeedBraces",
+            "props": {
+                "allowSingleLineStatement": true,
+                "tokens": [
+                    "CATCH",
+                    "DO_WHILE",
+                    "ELSE_IF",
+                    "FOR",
+                    "FUNCTION",
+                    "IF",
+                    "WHILE"
+                ]
+            }
+        },
+        {
+            "type": "NullableParameter",
+            "props": {
+                "option": "questionMark"
+            }
+        },
+        {
+            "type": "ParameterName",
+            "props": {
+                "format": "^[a-z][a-zA-Z0-9]*$",
+                "ignoreExtern": true
+            }
+        },
+        {
+            "type": "PublicAccessor"
+        },
+        {
+            "type": "RedundantAccessMeta"
+        },
+        {
+            "type": "RedundantAllowMeta"
+        },
+        {
+            "type": "RedundantModifier",
+            "props": {
+                "enforcePrivate": false,
+                "enforcePublic": false,
+                "enforcePublicPrivate": false
+            }
+        },
+        {
+            "type": "Return",
+            "props": {
+                "allowEmptyReturn": true,
+                "enforceReturnTypeForAnonymous": false,
+                "enforceReturnType": true
+            }
+        },
+        {
+            "type": "SimplifyBooleanExpression"
+        },
+        {
+            "type": "SimplifyBooleanReturn"
+        },
+        {
+            "type": "StringLiteral",
+            "props": {
+                "policy": "doubleAndInterpolation"
+            }
+        },
+        {
+            "type": "Trace"
+        },
+        {
+            "type": "TrailingWhitespace"
+        },
+        {
+            "type": "TypeDocComment",
+            "props": {
+                "tokens": [
+                    "ABSTRACT_DEF",
+                    "CLASS_DEF",
+                    "ENUM_DEF",
+                    "INTERFACE_DEF",
+                    "TYPEDEF_DEF"
+                ]
+            }
+        },
+        {
+            "type": "TypeName",
+            "props": {
+                "format": "^[A-Z][a-zA-Z0-9]*$",
+                "ignoreExtern": true,
+                "tokens": [
+                    "ABSTRACT",
+                    "CLASS",
+                    "ENUM",
+                    "INTERFACE",
+                    "TYPEDEF"
+                ]
+            }
+        },
+        {
+            "type": "UnnecessaryConstructor"
+        },
+        {
+            "type": "UnusedImport"
+        },
+        {
+            "type": "UnusedLocalVar"
+        },
+        {
+            "type": "VariableInitialisation"
+        }
+    ],
+    "exclude": {
+        "path": "RELATIVE_TO_PROJECT"
+    },
+    "version": 1
+}
