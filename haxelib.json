@@ -16,7 +16,7 @@
         "buffer"
     ],
     "description": "Customizable dictionaries, sets, and other collections.",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "releasenote": "Initial release",
     "classPath": "src/",
     "contributors": [
