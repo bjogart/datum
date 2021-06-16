@@ -15,7 +15,7 @@ class Stack<T> implements IBuffer<T> {
     final stack: GenericStack<T>;
     var _size: Int;
 
-    public inline function new(?vs: Iterable<T>) {
+    public inline function new(?vs: Iterator<T>) {
         stack = new GenericStack();
         _size = 0;
         if (vs != null) for (v in vs) push(v);

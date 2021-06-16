@@ -12,7 +12,7 @@ class Queue<T> implements IBuffer<T> {
 
     final queue: List<T>;
 
-    public inline function new(?vs: Iterable<T>) {
+    public inline function new(?vs: Iterator<T>) {
         queue = new List();
         if (vs != null) for (v in vs) push(v);
     }
