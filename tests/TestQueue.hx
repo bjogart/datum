@@ -17,7 +17,10 @@ class TestQueue implements ITest {
     }
 
     function test_iter_init() {
-        final q = new Queue([0, 1, 2]);
+        final q = new Queue();
+        q.push(0);
+        q.push(1);
+        q.push(2);
 
         Assert.equals(3, q.size);
         Assert.isFalse(q.isEmpty());
@@ -59,7 +62,10 @@ class TestQueue implements ITest {
     }
 
     function test_pop_order() {
-        final q = new Queue([0, 1, 2]);
+        final q = new Queue();
+        q.push(0);
+        q.push(1);
+        q.push(2);
 
         Assert.isTrue(0 == q.pop().unwrap());
         Assert.isTrue(1 == q.pop().unwrap());
@@ -68,7 +74,10 @@ class TestQueue implements ITest {
     }
 
     function test_pop_vals_eq_peek_vals() {
-        final q = new Queue([0, 1, 2]);
+        final q = new Queue();
+        q.push(0);
+        q.push(1);
+        q.push(2);
 
         Assert.isTrue(q.peek().equals(q.pop()));
         Assert.isTrue(q.peek().equals(q.pop()));

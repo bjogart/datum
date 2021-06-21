@@ -17,7 +17,10 @@ class TestStack implements ITest {
     }
 
     function test_iter_init() {
-        final s = new Stack([0, 1, 2]);
+        final s = new Stack();
+        s.push(0);
+        s.push(1);
+        s.push(2);
 
         Assert.equals(3, s.size);
         Assert.isFalse(s.isEmpty());
@@ -59,7 +62,10 @@ class TestStack implements ITest {
     }
 
     function test_pop_order() {
-        final s = new Stack([0, 1, 2]);
+        final s = new Stack();
+        s.push(0);
+        s.push(1);
+        s.push(2);
 
         Assert.isTrue(2 == s.pop().unwrap());
         Assert.isTrue(1 == s.pop().unwrap());
@@ -68,7 +74,10 @@ class TestStack implements ITest {
     }
 
     function test_pop_vals_eq_peek_vals() {
-        final s = new Stack([0, 1, 2]);
+        final s = new Stack();
+        s.push(0);
+        s.push(1);
+        s.push(2);
 
         Assert.isTrue(s.peek().equals(s.pop()));
         Assert.isTrue(s.peek().equals(s.pop()));
