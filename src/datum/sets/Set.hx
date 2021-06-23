@@ -20,8 +20,6 @@ abstract FrozenSet<T>(SetImpl<T>) from SetImpl<T> to Iterable<T> {
 
 typedef SetImpl<T> = {
     > Iterable<T>,
-    > Display,
-    > Debug,
     var size(get, never): Int;
     function add(v: T): Bool;
     function del(v: T): Bool;
