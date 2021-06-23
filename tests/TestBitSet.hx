@@ -287,7 +287,7 @@ class TestBitSet implements ITest {
     }
 
     function test_toRepr_with_empty_set() {
-        Assert.equals("BitSet { capacity=48, bits=[0x0, 0x0] }", s.toRepr());
+        Assert.equals("BitSet { capacity=48, bits=[0x00000000, 0x00000000] }", s.toRepr());
     }
 
     function test_toRepr_with_alternating_bytes() {
@@ -295,18 +295,18 @@ class TestBitSet implements ITest {
         for (i in 16...24) s.add(i);
         for (i in 32...40) s.add(i);
 
-        Assert.equals("BitSet { capacity=48, bits=[0xff00ff, 0xff] }", s.toRepr());
+        Assert.equals("BitSet { capacity=48, bits=[0x00ff00ff, 0x000000ff] }", s.toRepr());
     }
 
     function test_toRepr_with_set_of_ones() {
         for (i in 0...SET_CAP) s.add(i);
 
-        Assert.equals("BitSet { capacity=48, bits=[0xffffffff, 0xffff] }", s.toRepr());
+        Assert.equals("BitSet { capacity=48, bits=[0xffffffff, 0x0000ffff] }", s.toRepr());
     }
 
     function test_toRepr_with_0s_and_1s() {
         for (i in 0...SET_CAP) if (i.isEven()) s.add(i);
 
-        Assert.equals("BitSet { capacity=48, bits=[0x55555555, 0x5555] }", s.toRepr());
+        Assert.equals("BitSet { capacity=48, bits=[0x55555555, 0x00005555] }", s.toRepr());
     }
 }

@@ -228,7 +228,7 @@ private class BitSetImpl implements ISetImpl<Int> {
     }
 
     public function hash(hasher: Hasher): Void {
-        for (i in 0...bits.length) hasher.addInt32(bits[i]);
+        for (i in 0...bits.length) hasher.i32(bits[i]);
     }
 
     public function toStr(): String {
