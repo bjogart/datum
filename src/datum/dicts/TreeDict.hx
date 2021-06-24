@@ -29,6 +29,11 @@ class TreeDict<K, V> implements IDictImpl<K, V> {
         return _size;
     }
 
+    public function clear(): Void {
+        root = None;
+        _size = 0;
+    }
+
     public function del(key: K): Option<V> {
         final tup = delete(root, key);
         root = tup.replace;
@@ -251,7 +256,6 @@ abstract DelSuccessor<K, V>(Pair<Option<Node<K, V>>, Node<K, V>>) {
     }
 }
 
-// TODO test how single-enum nodes perform as opposed to Option<Node>
 private class Node<K, V> {
     public var key: K;
     public var val: V;

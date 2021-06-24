@@ -111,6 +111,14 @@ class TestBitSet implements ITest {
         }
     }
 
+    function test_clear_sets_size_to_0() {
+        for (i in 0...SET_CAP) s.add(i);
+        Assert.equals(SET_CAP, s.size);
+
+        s.clear();
+        Assert.equals(0, s.size);
+    }
+
     function test_not() {
         for (i in 0...SET_CAP) Assert.isFalse(s[i]);
         ~s;

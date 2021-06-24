@@ -2,7 +2,7 @@ package datum.dicts;
 
 using fount.Core;
 
-@:forward(size, del, keyValueIterator, toStr, toRepr)
+@:forward(size, del, clear, keyValueIterator, toStr, toRepr)
 abstract Dict<K, V>(DictImpl<K, V>) from DictImpl<K, V> to KeyValueIterable<K, V> {
     @:arrayAccess
     public inline function get(key: K): Option<V> {
@@ -26,17 +26,19 @@ abstract FrozenDict<K, V>(Dict<K, V>) from Dict<K, V> to KeyValueIterable<K, V> 
 typedef DictImpl<K, V> = {
     > KeyValueIterable<K, V>,
     var size(get, never): Int;
-    function del(k: K): Option<V>;
-    function get(k: K): Option<V>;
-    function set(k: K, v: V): Option<V>;
+    function del(key: K): Option<V>;
+    function get(key: K): Option<V>;
+    function set(key: K, val: V): Option<V>;
+    function clear(): Void;
 }
 
 interface IDictImpl<K, V> {
     var size(get, never): Int;
     function keyValueIterator(): KeyValueIterator<K, V>;
-    function del(k: K): Option<V>;
-    function get(k: K): Option<V>;
-    function set(k: K, v: V): Option<V>;
+    function del(key: K): Option<V>;
+    function get(key: K): Option<V>;
+    function set(key: K, val: V): Option<V>;
+    function clear(): Void;
 }
 
 class DictTools {

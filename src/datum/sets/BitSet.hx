@@ -17,6 +17,10 @@ abstract BitSet(BitSetImpl) to Set<Int> {
         this = new BitSetImpl(capacity);
     }
 
+    public inline function clear(): Void {
+        this.clear();
+    }
+
     public inline function add(i: Int): Bool {
         return this.add(i);
     }
@@ -169,6 +173,10 @@ private class BitSetImpl implements ISetImpl<Int> {
         final idx = widx(i);
         final mask = mask(i);
         return bits[idx] & mask == mask;
+    }
+
+    public function clear(): Void {
+        for (i in 1...bits.length) bits[i] = 0;
     }
 
     public inline function iterator(): Iterator<Int> {

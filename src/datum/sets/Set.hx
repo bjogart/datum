@@ -2,7 +2,7 @@ package datum.sets;
 
 using fount.Core;
 
-@:forward(size, add, del, iterator)
+@:forward(size, add, del, clear, iterator)
 abstract Set<T>(SetImpl<T>) from SetImpl<T> to Iterable<T> {
     @:arrayAccess
     public inline function has(v: T): Bool {
@@ -24,6 +24,7 @@ typedef SetImpl<T> = {
     function add(v: T): Bool;
     function del(v: T): Bool;
     function has(v: T): Bool;
+    function clear(): Void;
 }
 
 interface ISetImpl<T> {
@@ -32,4 +33,5 @@ interface ISetImpl<T> {
     function add(v: T): Bool;
     function del(v: T): Bool;
     function has(v: T): Bool;
+    function clear(): Void;
 }

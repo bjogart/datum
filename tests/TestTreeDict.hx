@@ -24,6 +24,22 @@ class TestTreeDict implements ITest {
         Assert.equals(0, d.size);
     }
 
+    function test_clear() {
+        d.clear();
+        Assert.equals(0, d.size);
+        Assert.isFalse(d.keyValueIterator().hasNext());
+
+        for (i in 0...10) d[KEYS[i]] = VALS[i];
+
+        Assert.equals(10, d.size);
+        Assert.isTrue(d.keyValueIterator().hasNext());
+
+        d.clear();
+
+        Assert.equals(0, d.size);
+        Assert.isFalse(d.keyValueIterator().hasNext());
+    }
+
     function test_set() {
         for (i in 0...10) {
             Assert.isTrue((d[KEYS[i]] = VALS[i]).isNone());
@@ -72,12 +88,12 @@ class TestTreeDict implements ITest {
             final op = Std.random(2);
             switch op {
                 case 0:
-                    if (!d[key].equals(d[key] = val) || val != d[key].unwrap()) {
+                    if (d[key].neBy(d[key] = val, IntTools.ne) || val != d[key].unwrap()) {
                         Assert.fail();
                         return;
                     }
                 case 1:
-                    if (!d[key].equals(d.del(key)) || d[key].isSome()) {
+                    if (d[key].neBy(d.del(key), IntTools.ne) || d[key].isSome()) {
                         Assert.fail();
                         return;
                     }
